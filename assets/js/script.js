@@ -30,7 +30,12 @@ $(document).ready(function () {
 	//  the proper textareas.
 	function renderTasks() {
 
-		taskList = JSON.parse(localStorage.getItem("tasks"));
+		let userStorage = JSON.parse(localStorage.getItem("tasks"))
+		if (userStorage !== null) {
+
+			taskList = userStorage;
+
+		}
 
 		for(let i = 0; i < 9; i++) {
 
