@@ -6,31 +6,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<!--Bootstrap CSS-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!--FontAwesome CSS (for the disk icon)-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="style.css" />
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&family=PT+Sans+Caption&display=swap" rel="stylesheet">
+	<!--Local CSS-->
+		<link rel="stylesheet" href="assets/css/style.css" />
+	<!--jQuery-->
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"
 		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<!--moment.js-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-	<script src="../Assets/script.js"></script>
+	<!--Local js-->
+	<script src="assets/js/script.js"></script>
 	<title>Work Day Scheduler</title>
 </head>
 
 <body>
 	<header class="jumbotron">
-		<h1 class="display-3">Work Day Scheduler</h1>
+		<h1 class="display-3">WORK DAY SCHEDULER</h1>
 		<p class="lead">A simple calendar app for scheduling your work day</p>
 		<p id="currentDay" class="lead"></p>
 	</header>
 
-	<div class="container">
+	<main class="container">
 
-		<div class="row time-block">
+		<!--Each row is assigned an ID corresponding to the hour of the day in military time.-->
+		<!--The id is the primary selector used in the js-->
+		<div id="9" class="row time-block">
 
 			<div class="col-1 hour">
-					9AM
+				<p>9AM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -41,10 +49,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="10" class="row time-block">
 
 			<div class="col-1 hour">
-					10AM
+				<p>10AM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -55,10 +63,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="11" class="row time-block">
 
 			<div class="col-1 hour">
-					11AM
+				<p>11AM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -69,10 +77,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="12" class="row time-block">
 
 			<div class="col-1 hour">
-					12PM
+				<p>12PM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -83,10 +91,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="13" class="row time-block">
 
 			<div class="col-1 hour">
-					1PM
+				<p>1PM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -97,10 +105,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="14" class="row time-block">
 
 			<div class="col-1 hour">
-					2PM
+				<p>2PM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -111,10 +119,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="15" class="row time-block">
 
 			<div class="col-1 hour">
-					3PM
+				<p>3PM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -125,10 +133,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="16" class="row time-block">
 
 			<div class="col-1 hour">
-					4PM
+				<p>4PM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -139,10 +147,10 @@
 
 		</div>
 
-		<div class="row time-block">
+		<div id="17" class="row time-block">
 
 			<div class="col-1 hour">
-					5PM
+				<p>5PM</p>
 			</div>
 			<div class="col-10">
 				<textarea></textarea>
@@ -152,9 +160,10 @@
 			</div>
 
 		</div>
-		<!-- Timeblocks go here -->
-	</div>
 
+	</main>
+
+	<audio preload='auto' id='wetclick' src='assets/audio/wetclick.wav'></audio>
 	
 </body>
 
