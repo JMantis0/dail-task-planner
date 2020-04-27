@@ -1,4 +1,4 @@
-##Day Planner
+# Day Planner
 
 Keep your tasks organized with this simple day planner.
 
