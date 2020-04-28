@@ -30,4 +30,6 @@ Thanks to [Audacity](https://www.audacityteam.org/) for their free audio softwar
 
 Thanks to [Bootstrap CSS Framework](https://getbootstrap.com/) for their open source CSS library.
 
+Thanks to [Animate.css](https://daneden.github.io/animate.css/) for their easy to use animations.
+
 And thank you to [Vecteezy.com](https://www.vecteezy.com/) for the background art.
