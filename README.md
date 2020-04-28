@@ -1,6 +1,6 @@
 # Day Planner
 
-##Keep your tasks organized with this simple day planner.
+## Keep your tasks organized with this simple day planner.
 ![main](assets/images/main.PNG)
 **[Try it yourself!](https://jmantis0.github.io/work-day-scheduler/)**
 
