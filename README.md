@@ -1,7 +1,7 @@
 # Day Planner
 
 ##Keep your tasks organized with this simple day planner.
-![main](assets/images/main.jpg)
+![main](assets/images/main.PNG)
 **[Try it yourself!](https://jmantis0.github.io/work-day-scheduler/)**
 
 ## Features
@@ -18,7 +18,9 @@ This planner also allows you to edit, save, or delete your tasks as you wish, an
 100% Accurate
 
 ### Responsive Design
+Fully functionally on desktops and mobile devices.
 
+![mobile-ver](/assets/images/mobileview.gif)
 
 ##  Contributions
 
