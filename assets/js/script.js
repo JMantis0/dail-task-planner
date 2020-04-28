@@ -57,7 +57,7 @@ $(document).ready(function () {
 
 		$(".row").each(function(){
 
-			let currentHour = 13//parseInt(moment().format("H"));
+			let currentHour = parseInt(moment().format("H"));
 			let textareaHour = parseInt($(this, "textarea").attr("id"));
 
 			if(textareaHour < currentHour) {
