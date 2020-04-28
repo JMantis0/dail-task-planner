@@ -7,13 +7,15 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!--Animate.CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	<!--FontAwesome CSS (for the disk icon)-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&family=PT+Sans+Caption&display=swap" rel="stylesheet">
 	<!--Local CSS-->
-		<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/style.css">
 	<!--jQuery-->
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"
 		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
@@ -33,15 +35,18 @@
 
 	<main class="container">
 
-		<!--Each row is assigned an ID corresponding to the hour of the day in military time.-->
-		<!--The id is the primary selector used in the js-->
+		<!--Each row is assigned an id corresponding to the hour of the day in military time.-->
+		<!--The row ids are the primary selectors used in traverse the DOM.-->
 		<div id="9" class="row time-block">
 
 			<div class="col-1 hour">
 				<p>9AM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -55,7 +60,10 @@
 				<p>10AM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -69,7 +77,10 @@
 				<p>11AM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -83,7 +94,10 @@
 				<p>12PM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -97,7 +111,10 @@
 				<p>1PM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -111,7 +128,10 @@
 				<p>2PM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -125,7 +145,10 @@
 				<p>3PM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -139,7 +162,10 @@
 				<p>4PM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -153,7 +179,10 @@
 				<p>5PM</p>
 			</div>
 			<div class="col-10">
-				<textarea></textarea>
+				<textarea class=" fadeIn animated"></textarea>
+				<button class="btn del">
+					<span>&times;</span>
+				</button>
 			</div>
 			<div class="col-1 saver">
 				<button class="saveBtn"><i class="fas fa-save"></i></button>
@@ -163,8 +192,15 @@
 
 	</main>
 
-	<audio preload='auto' id='wetclick' src='assets/audio/wetclick.wav'></audio>
-	
+	<footer>
+		<a href="https://www.vecteezy.com/free-vector/background">Background Vectors by Vecteezy</a>
+	</footer>
+
+
+	<div id="audios">
+		<audio preload='auto' id='remove' src='assets/audio/remove.wav'></audio>
+		<audio preload='auto' id='save' src='assets/audio/save.wav'></audio>
+	</div>
 </body>
 
 </html>

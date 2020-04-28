@@ -1,39 +1,68 @@
 body {
-  font-size: 16px;
-  line-height: 1;
-  font-family: 'PT Sans Caption', sans-serif;
-}
-
-textarea {
-  
-  background: transparent;
-  resize: none;
-  color: #000000;
-  border: 1px solid black;
-  padding: 10px;
-  width: 100%;
-  height:100%;
+	font-size: 16px;
+	line-height: 1;
+	font-family: 'PT Sans Caption', sans-serif;
+	min-width: 320px;
+	background-image: url(../images/triangles.jpg);
+	background-position: center;
+	background-size: cover;
 }
 
 .jumbotron {
-  text-align: center;
-  font-family: 'Lexend Giga', sans-serif;
-  background-image: url(../images/jumbo.jpg);
-  background-position: center;
-  background-size: cover;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+	text-align: center;
+	font-family: 'Lexend Giga', sans-serif;
+	background-image: url(../images/jumbo.jpg);
+	background-position: center;
+	background-size: cover;
+	color: black;
+	border-radius: 0;
+	border-bottom: 10px solid black;
 }
 
+textarea {
+	position: relative;
+	background: transparent;
+	resize: none;
+	padding: 10px;
+	width: 100%;
+	height:100%;
+	border-width: 0px;
+}
+
+.white {
+	color:white;
+	font-size: 30px;
+}	
+
+
+.flash {
+	font-size: inherit;
+	color: black;
+	-webkit-transition: all 1s ease-in;
+	-moz-transition: all 1s ease-in;
+	-o-transition: all 1s ease-in;
+	transition:  all 1s ease-in;
+}
+
+.del {
+	position: absolute;
+	right:2px;
+	border-radius: 3px;
+	top: 2px;
+}
+
+
+
 .time-block{
-  text-align: center;
-  border-radius: 15px;
+	text-align: center;
+	border-radius: 15px;
 }
 
 .row {
-  height: 80px;
-  border-top: 1px solid white;;
+	height: 80px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	overflow: hidden;
 }
 
 .row > * {
@@ -49,54 +78,77 @@ p {
 	-webkit-animation:spin 1s linear infinite;
 	-moz-animation:spin 1s linear infinite;
 	animation:spin 1s linear infinite;
- }
+}
 
- @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
- @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
- @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .hour {
-  background-image: linear-gradient(yellow, gold);
-  color: #000000;
-  border-top: 1px dashed #000000;
-  border-bottom: 1px dashed black;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-left: 1px dashed black;
+	background-image: linear-gradient(rgb(238, 160, 44), rgb(218, 95, 64));
+	color: white;
+	font-weight: 600;
+
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-left: 1px dashed black;
+
 }
 
 .past {
-  background-color: d3d3d3;
-  background-image: linear-gradient(#d3d3d3,#a1a1a1);
-  color: black;
+	background-image: linear-gradient(#d3d3d3,#a1a1a1);
+	color: black;
 }
 
 .present {
-  background-image: linear-gradient(#ff6961, #eb4b43,);
-  background-color: #ff6961;
-  color: black;
+	background-image: linear-gradient(#fbff00, #c1aa00);
+	color: black;
 }
 
 .future {
-  background-image: linear-gradient(#98ec98, rgb(50, 231, 117), );
-  background-color: #77dd77;
-  color: black;
+	background: linear-gradient(#b9ffb9, rgb(43, 220, 108));
+	color: black;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  background-image: linear-gradient(rgb(170, 45, 170), rgb(59, 5, 59));
-  color: white;
-  height: 100%;
-  width: 100%;
+	border-left: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #06AED5;
+	background-image: linear-gradient(rgb(0, 187, 255), rgb(44, 121, 197));
+	color: white;
+	height: 100%;
+	width: 100%;
+	margin-left: 0px;
 }
 
 .saveBtn i:hover {
-  font-size: 30px;
-  transition: all .3s ease-in-out;
+	font-size: 30px;
+	transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 578px) {
+
+	.rotate {
+		transform: rotate(-90deg);
+	}
+
+}
+
+@media screen and (max-width: 576px) {
+
+	.display-3 {
+		font-size: 40px;
+	}
+
+	.lead {
+		font-size: 14px;
+	}
+
+}
+
+footer {
+	text-align: center;
 }

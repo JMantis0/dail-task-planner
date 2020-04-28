@@ -4,7 +4,8 @@ let taskList = ["","","","","","","","",""];
 $(document).ready(function () {
 
 	sounds = {
-		wetclick: () => $("#wetclick")[0].play()
+		remove: () => $("#remove")[0].play(),
+		save:     () => $("#save")[0].play()
 	}
 
 	//  Function start displays the current date and time in the header.
@@ -31,27 +32,32 @@ $(document).ready(function () {
 	function renderTasks() {
 
 		let userStorage = JSON.parse(localStorage.getItem("tasks"))
-		if (userStorage !== null) {
-
-			taskList = userStorage;
+		if (userStorage == null) {
+			$("textarea").each(function(){
+				$(this).attr("placeholder", "(empty)");
+			})
+			return;
 
 		}
-
+		taskList = userStorage;
 		for(let i = 0; i < 9; i++) {
 
+			if(taskList[i] == "") {
+				$("#" + (i+9) + " textarea").attr("placeholder", "(empty)");
+			}
 			$("#" + (i+9) + " textarea").text(taskList[i]);
 
 		}
 
 	}
 		
-	//  Function updateColors applies colors to textareas based on
-	//  current time of day.
+	//  Function updateColors applies colors to textareas
+	//  based on current time of day.
 	function updateColors() {
 
 		$(".row").each(function(){
 
-			let currentHour = parseInt(moment().format("H"));
+			let currentHour = 13//parseInt(moment().format("H"));
 			let textareaHour = parseInt($(this, "textarea").attr("id"));
 
 			if(textareaHour < currentHour) {
@@ -73,32 +79,70 @@ $(document).ready(function () {
 
 	}
 
-	//  Function saveTask saves the hourly task for whichever
-	//  button was clicked into the taskList and localStorage
+	//  Function saveTask saves textarea content
+	//  into the taskList and localStorage
 	function saveTask() {
 
-		let textHour = $(this).parents(".row").attr("id");
-		let hourTask = $("#" + textHour + " textarea").val();
-		taskList[textHour-9] = hourTask;
+		let hour = $(this).parents(".row").attr("id");
+		let hourTask = $("#" + hour + " textarea").val();
+		taskList[hour-9] = hourTask;
 		localStorage.setItem("tasks", JSON.stringify(taskList));
+		
+	}
+
+	//  Extra feature: Button click clears
+	//  content of textarea with animation.
+	function clearTask() {
+
+		let hour = $(this).parents(".row").attr("id");
+		let taskSpace = "#"+ hour + " textarea";
+		$(taskSpace).addClass("animated fadeOutRight");
+
+		setTimeout(function(){
+
+			$(taskSpace).removeClass("animated fadeOutRight");
+			$("#"+ hour + " textarea").val("");
+			$(taskSpace).addClass("animated fadeIn").attr("placeholder", "(empty)");
+
+			setTimeout(function(){
+
+				$(taskSpace).removeClass("animated fadeIn");
+
+			}, 1000);
+
+		},1000);
 		
 	}
 
 	//  Spinning is fun.
 	function oneSpin() {
 
-		let a = $(this).find("i");
-		let b = $("#" + parseInt($(this).parents(".row").attr("id")) + " p");
-		a.addClass("spin");
-		b.addClass("spin");
+		let diskIcon = $(this).find("i");
+		diskIcon.addClass("spin");	
 		setTimeout(function(){
-			a.removeClass("spin");
-			b.removeClass("spin");
+			diskIcon.removeClass("spin");
 		 },1000);
 
 	}
 
-	$(".saveBtn").click(saveTask).click(sounds.wetclick).click(oneSpin);
+	//  Flash text effect
+	function textFlash() {
+
+		let hour = $(this).parents(".row").attr("id");
+		let taskSpace = "#"+ hour + " textarea";
+		$(taskSpace).addClass("white");
+		setTimeout(function(){
+			$(taskSpace).addClass("flash");
+		}, 1);
+		setTimeout(function(){
+			$(taskSpace).removeClass("flash white");
+		}, 1000);
+
+	}
+
+	$(".row p").addClass("rotate");
+	$(".del").click(clearTask).click(sounds.remove);
+	$(".saveBtn").click(saveTask).click(sounds.save).click(oneSpin).click(textFlash);
 	$(".row").last().css("margin-bottom", "100px");
 	start();
 
