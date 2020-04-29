@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 	sounds = {
 		remove: () => $("#remove")[0].play(),
-		save:     () => $("#save")[0].play()
+		save:   () => $("#save")[0].play()
 	}
 
 	//  Function start displays the current date and time in the header.
