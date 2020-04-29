@@ -1,4 +1,4 @@
-# Day Planner
+# Work Day Scheduler
 
 ## Keep your tasks organized with this simple day planner.
 ![main](assets/images/main.PNG)
