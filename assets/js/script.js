@@ -1,5 +1,5 @@
 //  Global variable
-let taskList = ["","","","","","","","",""];
+let taskList = ["","","","","","","","","","","","","","","","","","",""];
 
 $(document).ready(function () {
 
@@ -40,12 +40,12 @@ $(document).ready(function () {
 
 		}
 		taskList = userStorage;
-		for(let i = 0; i < 9; i++) {
+		for(let i = 0; i < 19; i++) {
 
 			if(taskList[i] == "") {
-				$("#" + (i+9) + " textarea").attr("placeholder", "(empty)");
+				$("#" + (i+5) + " textarea").attr("placeholder", "(empty)");
 			}
-			$("#" + (i+9) + " textarea").text(taskList[i]);
+			$("#" + (i+5) + " textarea").text(taskList[i]);
 
 		}
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
 		let hour = $(this).parents(".row").attr("id");
 		let hourTask = $("#" + hour + " textarea").val();
-		taskList[hour-9] = hourTask;
+		taskList[hour-5] = hourTask;
 		localStorage.setItem("tasks", JSON.stringify(taskList));
 		
 	}
